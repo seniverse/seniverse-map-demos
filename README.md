@@ -35,7 +35,7 @@ sensemap.accessToken = 公钥_私钥 或 公钥_
 ## 图层目录
 
 1. 天气要素, [文档](./docs/weather.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/temp.html)
-2. 空气质量要素, [文档](./docs/aqi.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/aqi.html)
+2. 空气质量要素, [文档](./docs/air.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/aqi.html)
 3. 动态风场, [文档](./docs/windy.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/windy.html)
 
 ## 目前支持地图
