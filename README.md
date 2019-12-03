@@ -26,7 +26,7 @@ sensemap.accessToken = 公钥_私钥 或 公钥_
       // 设置 accessToken
       sensemap.accessToken = "公钥_私钥 或 公钥_";
       // 创建想要的图层并加入到map中
-      new SenseMap.Temp({ options }).addTo(map);
+      SenseMap.Temp({ options }).addTo(map);
     </script>
   </body>
 </html>
