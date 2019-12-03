@@ -15,5 +15,5 @@ var map = new AMap.Map("map", {
 });
 
 //添加温度图层
-const tempLayer = new SenseMap.Aqi({ map });
+const tempLayer = SenseMap.Aqi({ map });
 ```

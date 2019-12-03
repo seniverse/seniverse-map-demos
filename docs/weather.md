@@ -15,14 +15,14 @@ var map = new AMap.Map("map", {
 });
 
 //添加温度图层
-const tempLayer = new SenseMap.Temp({ map, time: "2019120216" });
+const tempLayer = SenseMap.Temp({ map, time: "2019120216" });
 
 // 或添加降水图层
-const rainLayer = new SenseMap.Rain({ map });
+const rainLayer = SenseMap.Rain({ map });
 
 // 其他可选
-// const layer = new SenseMap.Wind({ map }); 风速
-// const layer = new SenseMap.Humidity({ map }); 湿度
+// const layer = SenseMap.Wind({ map }); 风速
+// const layer = SenseMap.Humidity({ map }); 湿度
 ```
 
 ### 参数
