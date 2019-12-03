@@ -4,10 +4,10 @@
 
 ## 设置 accessToken
 
-在使用任何一个图层前，你需要在全局设置 accessToken，将其挂在到浏览器的 window 对象中，在**本地**开发环境中，accessToken 的格式为`公钥_私钥`，**注意**，在**生产**环境中**不**需要提供私钥，accessToken 的格式为`公钥_`
+在使用任何一个图层前，你需要在全局设置 accessToken，将其挂在到浏览器的 window 对象中，在**本地**开发环境中，accessToken 的格式为`公钥/私钥`，**注意**，在**生产**环境中**不**需要提供私钥，accessToken 的格式为`公钥/`
 
 ```html
-sensemap.accessToken = 公钥_私钥 或 公钥_
+sensemap.accessToken = 公钥/私钥 或 公钥/
 ```
 
 ## js 文件的使用方式
@@ -24,7 +24,7 @@ sensemap.accessToken = 公钥_私钥 或 公钥_
   <body>
     <script>
       // 设置 accessToken
-      sensemap.accessToken = "公钥_私钥 或 公钥_";
+      sensemap.accessToken = "公钥/私钥 或 公钥/";
       // 创建想要的图层并加入到map中
       new SenseMap.Temp({ options }).addTo(map);
     </script>
