@@ -6,7 +6,7 @@
 
 ```js
 var layer = new SenseMap.Windy({
-  map: map, // 高德地图map对象
+  map: map, // 高德地图map实例
   minVelocity: 0,
   maxVelocity: 10,
   velocityScale: 0.001,
@@ -18,11 +18,57 @@ var layer = new SenseMap.Windy({
 
 ### 参数
 
-|       参数名       |  类型  | 默认值  | 必须 |              备注              |
-| :----------------: | :----: | :-----: | :--: | :----------------------------: |
-|    minVelocity     | Number |    0    |  否  |        最小的风速 (m/s)        |
-|    maxVelocity     | Number |   10    |  否  |        最大的风速 (m/s)        |
-|   velocityScale    | Number |  0.001  |  否  |           风速的比例           |
-|    particleAge     | Number |   120   |  否  | 重绘之前生成的模拟点的最大帧数 |
-| particleMultiplier | Number | 1 / 300 |  否  |           模拟点数量           |
-|     lineWidth      | Number |    1    |  否  |           拖尾的线宽           |
+|       参数名       |   类型   |     默认值     |     取值范围      | 必须  |                                备注                                |
+| :----------------: | :------: | :------------: | :---------------: | :---: | :----------------------------------------------------------------: |
+|        map         |  Object  |       -        |         -         |  否   |                       高德地图的map实例对象                        |
+|       render       |  String  |    'canvas'    | 'webgl'or'canvas' |  否   |         默认使用canvas进行渲染，需要开启webgl时从这里传入          |
+|    minVelocity     |  Number  |       0        |       0-20        |  否   |                          最小的风速 (m/s)                          |
+|    maxVelocity     |  Number  |       10       |       0-20        |  否   |                          最大的风速 (m/s)                          |
+|   velocityScale    |  Number  |     0.001      |      0-0.05       |  否   |                             风速的比例                             |
+|    particleAge     |  Number  |      120       |       0-240       |  否   |                   重绘之前生成的模拟点的最大帧数                   |
+| particleMultiplier |  Number  |    1 / 300     |       0-0.1       |  否   |                           模拟点数量系数                           |
+|     lineWidth      |  Number  |       1        |       1-10        |  否   |                             拖尾的线宽                             |
+|     colorScale     | [String] | 一组白色渐变色 |         -         |  否   | 数组字符串应为合法的颜色字符串，传入长度为一的数组时，粒子将为单色 |
+
+
+### 方法
+
+#### updateParams(config)
+
+更新风场动画相关参数:
+```js
+layer.updateParams({
+  minVelocity: 1,
+  maxVelocity: 4,
+  velocityScale: 0.002,
+  particleAge: 80,
+  lineWidth: 2,
+  particleMultiplier: 1 / 400,
+  colorScale: ['blue']
+})
+```
+
+#### appendTo(map)
+
+将风场图层添加到地图实例上，初始化图层如果没有传入参数map，可以通过这个方法将图层添加到地图上
+
+```js
+const map = new AMap.map('map')
+layer.appendTo(map)
+```
+
+#### show()
+
+显示风场图层
+
+#### hide()
+
+隐藏风场图层
+
+#### start()
+
+开启风场动画
+
+#### stop()
+
+停止风场动画
