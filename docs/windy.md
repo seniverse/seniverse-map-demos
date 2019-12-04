@@ -21,7 +21,7 @@ var layer = new SenseMap.Windy({
 |       参数名       |   类型   |     默认值     |     取值范围      | 必须  |                                备注                                |
 | :----------------: | :------: | :------------: | :---------------: | :---: | :----------------------------------------------------------------: |
 |        map         |  Object  |       -        |         -         |  否   |                       高德地图的map实例对象                        |
-|       render       |  String  |    'canvas'    | 'webgl'or'canvas' |  否   |         默认使用canvas进行渲染，需要开启webgl时从这里传入          |
+|       render       |  String  |    'webgl'     | 'webgl'or'canvas' |  否   |       默认使用webgl进行渲染，需要开启canvas渲染时从这里传入        |
 |    minVelocity     |  Number  |       0        |       0-20        |  否   |                          最小的风速 (m/s)                          |
 |    maxVelocity     |  Number  |       10       |       0-20        |  否   |                          最大的风速 (m/s)                          |
 |   velocityScale    |  Number  |     0.001      |      0-0.05       |  否   |                             风速的比例                             |
