@@ -19,7 +19,8 @@
       }
 
       #btn_opacity,
-      #btn_range {
+      #btn_range,
+      #btn_legend {
         position: fixed;
         left: 10px;
         top: 10px;
@@ -79,7 +80,16 @@
         document
           .getElementById("btn_legend")
           .addEventListener("click", function() {
-            layer.updateParams({ range: [50, 200] });
+            const colors = [
+              "rgba(30, 35, 137, 1)",
+              "rgba(66, 184, 65, 1)",
+              "rgba(255, 95, 89, 1)",
+              "rgba(133, 61, 255, 1)",
+              "rgba(117, 21, 45, 1)",
+              "rgba(100, 111, 42, 1)"
+            ];
+            const values = [0, 100, 200, 300, 400, 500];
+            layer.updateParams({ legend: [colors, values] });
           });
       };
     </script>
