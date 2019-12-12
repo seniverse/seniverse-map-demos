@@ -1,6 +1,6 @@
 # 使用说明
 
-目前图层产品属于公测阶段，如果需要测试使用，请联系我们获得试用版密钥，包含公钥和私钥。
+目前图层产品属于公测阶段，如果需要测试使用，请联系我们获得试用密钥，包含公钥和私钥。
 
 ## 设置 accessToken
 
@@ -19,7 +19,7 @@ sensemap.accessToken = 公钥/私钥 或 公钥/
     <script src="//cache.amap.com/lbs/static/es5.min.js"></script>
     <script src="//webapi.amap.com/maps?v=1.4.15&key=your_amap_key"></script>
     <!-- 引入相对应地图框架的sensemap地图文件 -->
-    <script src="http://cdn.sencdn.com/sensemap/umd/amap.js"></script>
+    <script src="http://static.sencdn.com/sensemap/umd/amap.js"></script>
   </head>
   <body>
     <script>
@@ -32,15 +32,15 @@ sensemap.accessToken = 公钥/私钥 或 公钥/
 </html>
 ```
 
-## 图层目录
+## 高德地图目录
 
 1. 天气要素, [文档](./docs/weather.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/temp.html)
 2. 空气质量要素, [文档](./docs/air.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/aqi.html)
 3. 动态风场, [文档](./docs/windy.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/windy.html)
+4. 自定义参数, [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/update.html)
 
 ## 目前支持地图
 
 - [高德地图](https://lbs.amap.com/api/javascript-api/summary)
-- [Leaflet](https://leafletjs.com/index.html)
 
-更多地图的支持我们会逐步增加
+更多地图的支持我们会逐步增加，如果您急需某个地图，可以直接和我们联系或 提 issue

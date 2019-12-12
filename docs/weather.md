@@ -14,19 +14,39 @@ var map = new AMap.Map("map", {
   mapStyle: "amap://styles/dark"
 });
 
-//添加温度图层
-const tempLayer = SenseMap.Temp({ map, time: "2019120216" });
+// 添加温度图层
+const tempLayer = new SenseMap.Temp({ map, time: "2019120216" });
 
 // 或添加降水图层
-const rainLayer = SenseMap.Rain({ map });
-
-// 其他可选
-// const layer = SenseMap.Wind({ map }); 风速
-// const layer = SenseMap.Humidity({ map }); 湿度
+const rainLayer = new SenseMap.Rain({ map });
 ```
 
 ### 参数
 
-| 参数名 |  类型  |         默认值          | 必须 |                          备注                           |
-| :----: | :----: | :---------------------: | :--: | :-----------------------------------------------------: |
-|  time  | Number | 当前时刻(如 2019120215) |  否  | 不支持使用小于当前时刻的数值，支持 3 天之内任意小时数据 |
+| 参数名  |       类型        |         默认值          |        取值范围        | 必须 |                                  备注                                   |
+| :-----: | :---------------: | :---------------------: | :--------------------: | :--: | :---------------------------------------------------------------------: |
+|  time   |      Number       | 当前时刻(如 2019120215) |         0-3 天         |  否  |                      不支持使用小于当前时刻的数值                       |
+| opacity |      Number       |           0.9           |          0-1           |  否  |                               图层透明度                                |
+|  range  |     [number]      | [要素极小值,要素极大值] | 会根据要素极值自动约束 |  否  |          传入需要筛选的数据区间，可以只绘制需要展示的数据范围           |
+| legend  | [number,[Number]] | 参考 seniverse 官网展示 |      合法的颜色值      |  否  | 自定义图例数据，如[20,[255,255,0]]，20 代表某个阈值，255,255,0 代表颜色 |
+
+### 方法
+
+#### updateParams(config)
+
+更新相关参数:
+
+```js
+layer.updateParams({
+  opacity: 0.6,
+  range: [0, 20]
+});
+```
+
+#### show()
+
+显示图层
+
+#### hide()
+
+隐藏图层

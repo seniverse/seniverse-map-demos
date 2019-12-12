@@ -7,7 +7,7 @@
       name="viewport"
       content="initial-scale=1.0, user-scalable=no, width=device-width"
     />
-    <title>SeneMap.Aqi</title>
+    <title>SeneMap.Custom</title>
     <style>
       html,
       body,
@@ -17,11 +17,37 @@
         width: 100%;
         height: 100%;
       }
+
+      #btn_opacity,
+      #btn_range {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        width: 100px;
+        height: 30px;
+        border-radius: 8px;
+        z-index: 99;
+        cursor: pointer;
+        outline: none;
+      }
+
+      #btn_range {
+        top: 50px;
+      }
+
+      #btn_legend {
+        top: 90px;
+      }
     </style>
     <script src="https://static.sencdn.com/sensemap/umd/amap.js"></script>
+    <!-- <script src="./amap.js"></script> -->
   </head>
   <body>
     <div id="container"></div>
+    <button id="btn_opacity">更改透明度</button>
+    <button id="btn_range">筛选范围值</button>
+    <button id="btn_legend">更换图例</button>
+
     <script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
     <script src="https://webapi.amap.com/maps?v=1.4.15&key=791017a19012bd4b6aadd174dd0ea500"></script>
     <script>
@@ -37,6 +63,24 @@
         });
 
         var layer = new SenseMap.Aqi({ map, time: "2019120217" });
+
+        document
+          .getElementById("btn_opacity")
+          .addEventListener("click", function() {
+            layer.updateParams({ opacity: 0.4 });
+          });
+
+        document
+          .getElementById("btn_range")
+          .addEventListener("click", function() {
+            layer.updateParams({ range: [50, 200] });
+          });
+
+        document
+          .getElementById("btn_legend")
+          .addEventListener("click", function() {
+            layer.updateParams({ range: [50, 200] });
+          });
       };
     </script>
   </body>
