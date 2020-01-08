@@ -34,10 +34,14 @@ sensemap.accessToken = 公钥/私钥 或 公钥/
 
 ## 高德地图目录
 
-1. 天气要素, [文档](./docs/weather.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/temp.html)
-2. 空气质量要素, [文档](./docs/air.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/aqi.html)
-3. 动态风场, [文档](./docs/windy.md), [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/windy.html)
-4. 自定义参数, [demo](https://seniverse.github.io/seniverse-map-demos/example/amap/custom.html)
+[所有图层 demo](http://map.seniverse.com/examples/map/temp/index.html)
+
+1. 天气要素, [文档](./docs/weather.md)
+2. 空气质量要素, [文档](./docs/air.md)
+3. 动态风场, [文档](./docs/windy.md)
+4. 等值线图层, [文档](./docs/contour.md)
+5. 预警图层, [文档](./docs/alarm.md)
+6. 雷达图层, [文档](./docs/radar.md)
 
 ## 目前支持地图
 
