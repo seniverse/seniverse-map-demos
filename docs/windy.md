@@ -5,6 +5,16 @@
 ### 使用示例（AMap）
 
 ```js
+// 创建高德地图对象
+var map = new AMap.Map("map", {
+  viewMode: "3D",
+  resizeEnable: true,
+  zoom: 5,
+  center: [113.53450137499999, 34.44104525],
+  mapStyle: "amap://styles/dark"
+});
+
+// 添加动态风场图层
 var layer = new SenseMap.Windy({
   map: map, // 高德地图map实例
   minVelocity: 0,
